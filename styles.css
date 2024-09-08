@@ -1,0 +1,772 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #004080;
+    color: #fff;
+    position: relative; /* Position relative for mobile menu */
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+/* Mobile Menu Styles */
+#navLinks {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Mobile Menu Open */
+.nav-links.active {
+    display: flex;
+}
+
+/* Hero Section */
+.hero {
+    background: url('home1.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Hero Section Animation */
+.hero-content {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Hover Animation */
+.btn {
+    background-color: #ffd700;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.05); /* Slightly grows the button */
+}
+
+/* About Section */
+.about {
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Services Section */
+.services {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    flex: 1;
+    margin: 1rem;
+    background-color: #004080;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Lift the card upwards */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.portfolio-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    margin: 1rem;
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Portfolio Item Hover Animation */
+.portfolio-item img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+}
+
+/* Contact Section */
+.contact {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #004080;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #004080;
+    color: #fff;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablets and smaller (width: 768px and below) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .service-cards {
+        flex-direction: column;
+    }
+
+    .portfolio-items {
+        flex-direction: column;
+    }
+
+    .portfolio-item img {
+        max-width: 80%;
+    }
+}
+
+/* Mobile devices (width: 480px and below) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+    }
+
+    .service-card {
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+
+    .portfolio-item {
+        margin: 1rem 0;
+    }
+
+    .portfolio-item img {
+        max-width: 90%;
+    }
+
+    .contact input, .contact textarea {
+        padding: 0.8rem;
+    }
+
+    .contact button {
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* About Us Page Styles */
+.about-us {
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.about-us .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-us h1, .about-us h2 {
+    text-align: center;
+    color: #004080;
+}
+
+.expertise {
+    margin: 2rem 0;
+}
+
+.expertise-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.expertise-item {
+    flex: 1;
+    margin: 1rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team {
+    margin: 2rem 0;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.team-member img {
+    border-radius: 70%;
+    width: 180px;
+    height: 180px;
+    margin-right: 1.5rem;
+    object-fit: cover;
+}
+
+.member-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.member-info p {
+    margin-bottom: 0.5rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .expertise-items {
+        flex-direction: column;
+    }
+
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-member img {
+        margin: 0 auto 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-us h2 {
+        font-size: 1.5rem;
+    }
+
+    .expertise-item, .team-member {
+        margin: 1rem 0;
+    }
+
+    .team-member img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+/* Services Page Styles */
+.services {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.services .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.services h1 {
+    text-align: center;
+    color: #004080;
+    margin-bottom: 1rem;
+}
+
+.services p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.service-content h2 {
+    color: #004080;
+    margin-bottom: 1rem;
+}
+
+.service-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+.service-content ul li strong {
+    color: #004080;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column;
+    }
+
+    .service-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .services h1 {
+        font-size: 1.8rem;
+    }
+
+    .services p {
+        font-size: 1rem;
+    }
+
+    .service-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .service-content ul li {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Careers Page Styles */
+.careers {
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.careers .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.careers h1 {
+    text-align: center;
+    color: #004080;
+}
+
+.careers p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.job-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.job {
+    flex: 1;
+    margin: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.job img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.job-info {
+    padding: 1.5rem;
+}
+
+.job-info h2 {
+    margin-bottom: 1rem;
+    color: #004080;
+}
+
+.job-info p {
+    margin-bottom: 1rem;
+}
+
+/* Application Info */
+.application-info {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.application-info a {
+    color: #004080;
+    text-decoration: none;
+}
+
+.application-info a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .job-listings {
+        flex-direction: column;
+    }
+
+    .job {
+        margin: 1rem 0;
+    }
+}
+
+
+/* Contact Page Styles */
+.contact-us {
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.contact-us .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-us h1, .contact-us h2 {
+    text-align: center;
+    color: #004080;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    flex: 1;
+    margin: 1rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.contact-form {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #004080;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+}
+
+/* Map */
+.map {
+    margin-top: 2rem;
+}
+
+.map iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item img {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form input, .contact-form textarea {
+        padding: 0.8rem;
+    }
+
+    .contact-form button {
+        padding: 0.8rem 1.5rem;
+    }
+}

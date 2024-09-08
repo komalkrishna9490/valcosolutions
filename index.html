@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valko Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Valko Solutions</a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="carrers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Innovative Web & App Solutions</h1>
+            <p>We deliver customized, high-quality websites and apps for your business. Let us take your digital presence to the next level.</p>
+            <a href="services.html" class="btn">Explore Our Services</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Valko Solutions</h2>
+            <p>At Valko Solutions, we specialize in providing custom website and app development services. Over the past 18 months, we have successfully completed four projects and are currently working on two more. We are proud to have earned the trust of clients like Anurag University.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Web Development</h3>
+                    <p>We create responsive and user-friendly websites that help your business stand out.</p>
+                </div>
+                <div class="service-card">
+                    <h3>App Development</h3>
+                    <p>Our mobile apps are designed to offer the best user experience for both iOS and Android platforms.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Project Management</h3>
+                    <p>From planning to deployment, we ensure the smooth execution of every project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <a href="https://tedxanuragu.com/" target="_blank">
+                        <h3>TEDxAnuragU</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://rrspbl.co.in/" target="_blank">
+                        <h3>RRSPBL</h3>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://icifmede.com/" target="_blank">
+                        <h3>ICIFMEDE</h3>
+                    </a>
+                </div>
+                <!-- Add more portfolio items here -->
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <button id="showModal" class="btn">Learn More</button>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>More Information</h2>
+            <p>Here is some additional information about our services.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Valko Solutions. All Rights Reserved.</p>    
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
